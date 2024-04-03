@@ -1,0 +1,23 @@
+name: provision-aws-secret
+description: Provision AWS Secret
+author: DevOps Team
+
+inputs:
+  name:
+    description: 'The name of the Secret'
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+    - name: Provision AWS Secret
+      shell: bash
+      run: |
+        RESULT=$(aws secretsmanager describe-secret --secret-id "${{ inputs.name }}" --output text)
+
+        if [[ $RESULT == *"ResourceNotFoundException"* ]]; then
+          aws secretsmanager create-secret --name "${{ inputs.name }}"
+        else
+          echo "The secret ${{ inputs.name }} already exists."
+        fi
+        
