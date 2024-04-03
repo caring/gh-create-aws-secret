@@ -8,7 +8,7 @@ This GitHub Action provisions an AWS Secret in Secret Manager. It checks if the 
 
 | Name                  | Description                                                  | Required |
 | --------------------- | ------------------------------------------------------------ | -------- |
-| `elbName`             | The name of the Secret.                | ✔        |
+| `Name`             | The name of the Secret.                | ✔        |
 
 ## Outputs
 
