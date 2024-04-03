@@ -8,7 +8,7 @@ This GitHub Action provisions an AWS Secret in Secret Manager. It checks if the 
 
 | Name                  | Description                                                  | Required |
 | --------------------- | ------------------------------------------------------------ | -------- |
-| `Name`             | The name of the Secret.                | ✔        |
+| `name`             | The name of the Secret.                | ✔        |
 
 ## Outputs
 
@@ -29,7 +29,7 @@ jobs:
         id: secret
         uses: caring/gh-create-aws-secret@v1.0.0
         with:
-          Name: some-secret
+          name: some-secret
 ```
 
 This action will provision a Secret
