@@ -6,9 +6,9 @@ This GitHub Action provisions an AWS Secret in Secret Manager. It checks if the 
 
 ## Inputs
 
-| Name                  | Description                                                  | Required | Default                  |
-| --------------------- | ------------------------------------------------------------ | -------- | ------------------------ |
-| `elbName`             | The name of the Secret.                | ✔        | `ecs-modular-monolith`   |
+| Name                  | Description                                                  | Required |
+| --------------------- | ------------------------------------------------------------ | -------- |
+| `elbName`             | The name of the Secret.                | ✔        |
 
 ## Outputs
 
